@@ -3,7 +3,11 @@
 This project is a [React](https://reactjs.org/) exercise that fetches [NASA's APOD](https://api.nasa.gov/) API to display on my own page.
 It was created using [Vite](https://vitejs.dev/).
 
-## What I learned
+## Access
+
+You can check the website here: [jlntrog-nasapictureoftheday.netlify.app](https://jlntrog-nasapictureoftheday.netlify.app/)
+
+## What I have learned
 
 - Basic React state management, hooks and props
 - API calls using [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
