@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: white;
+  background-color: #030615;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  font-family: "Poppins", system-ui, sans-serif;
+
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-img {
+  width: 100%;
+  object-fit: cover;
+  flex: 1;
+  overflow-y: hidden;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+footer h1 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.bg-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, #030615 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.sidebar {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #030615;
+  opacity: 0.6;
+}
+
+.sidebar-content {
+  z-index: 15;
+  position: relative;
+  width: 90%;
+  height: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 1rem;
+  overflow-y: auto;
+  word-wrap: break-word;
+  background-color: #030615;
+}
+
+.sidebar-content h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.sidebar-description-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.sidebar-description {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.btn-close-sidebar {
+  z-index: 30;
+}
+
+.btn-close-sidebar,
+.btn-info {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: transparent;
+  color: white;
+  border: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.btn-close-sidebar:hover,
+.btn-info:hover {
+  opacity: 0.8;
+}
+
+.btn-close-sidebar:active,
+.btn-info:active {
+  scale: 0.9;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 1rem;
+  opacity: 0.6;
+}
+
+.loading-state i {
+  font-size: 3rem;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .sidebar {
+    position: relative;
+    inset: unset;
+    min-width: 35%;
+    box-shadow: 0 0 40px 1px #030615;
+  }
+
+  .sidebar-content {
+    width: unset;
+    margin: unset;
+  }
+}
