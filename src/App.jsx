@@ -15,8 +15,7 @@ export default function App() {
   useEffect(() => {
     async function fetchAPI() {
       const NASA_KEY = import.meta.env.VITE_NASA_API_KEY;
-      const url =
-        "https://api.nasa.gov/planetary/apod" + `?api_key=${NASA_KEY}`;
+      const url = `https://api.nasa.gov/planetary/apod?api_key=${NASA_KEY}`;
 
       const today = new Date().toDateString();
       const localKey = "NASA-" + today;
